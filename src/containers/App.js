@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-const mapStateToProps = function mapStateToProps(state) {
-  return {
-    state,
-  };
-};
+const mapStateToProps = (state) => ({
+    message: state.message
+});
 
 class App extends Component {
   render() {
     return (
-      <div id="main">
-        {this.props.state.message}
+      <div id="app">
+        { this.props.message }
       </div>
     );
   }
